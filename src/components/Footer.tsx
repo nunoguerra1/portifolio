@@ -13,7 +13,7 @@ export const Footer = () => {
         >
           <span className="font-extrabold text-primary text-lg">DevPortfolio</span>
           <p className="text-xs text-muted-foreground mt-1">
-            BUILT WITH CAFFEINE AND CURIOSITY &copy; 2024
+            FEITO COM AMOR E CARINHO &copy; 2024
           </p>
         </motion.div>
         <motion.div

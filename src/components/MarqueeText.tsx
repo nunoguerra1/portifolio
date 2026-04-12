@@ -10,11 +10,11 @@ interface MarqueeTextProps {
 }
 
 export const MarqueeText = ({ texts, speed = 20, className = "", reverse = false, separator = "star" }: MarqueeTextProps) => {
-  const separatorEl = separator === "star" 
+  const separatorEl = separator === "star"
     ? <Star size={16} weight="fill" className="text-primary mx-4 flex-shrink-0" />
     : separator === "dot"
-    ? <span className="w-2 h-2 rounded-full bg-primary mx-4 flex-shrink-0" />
-    : <span className="w-6 h-0.5 bg-primary mx-4 flex-shrink-0" />;
+      ? <span className="w-2 h-2 rounded-full bg-primary mx-4 flex-shrink-0" />
+      : <span className="w-6 h-0.5 bg-primary mx-4 flex-shrink-0" />;
 
   const content = texts.map((text, i) => (
     <span key={i} className="flex items-center whitespace-nowrap">
@@ -38,8 +38,8 @@ export const MarqueeText = ({ texts, speed = 20, className = "", reverse = false
 };
 
 export const LogoMarquee = ({ className = "" }: { className?: string }) => {
-  const logos = ["REACT", "TYPESCRIPT", "NODE.JS", "PYTHON", "DOCKER", "AWS", "FIGMA", "POSTGRESQL", "TAILWIND", "GIT"];
-  
+  const logos = ["REACT", "TYPESCRIPT", "NODE.JS", "PYTHON", "DOCKER", "NEXTJS", "FIGMA", "POSTGRESQL", "TAILWIND", "GIT"];
+
   return (
     <div className={`overflow-hidden py-4 ${className}`}>
       <motion.div
