@@ -105,8 +105,8 @@ export const ToolsSection = () => {
               className="flex items-center gap-3 bg-green-light rounded-full px-6 py-4 flex-1 min-w-[250px]"
             >
               <div>
-                <span className="font-bold text-foreground">Cloud Native</span>
-                <p className="text-sm text-primary">AWS & Google Cloud Services</p>
+                <span className="font-bold text-foreground">Deploy & Hospedagem</span>
+                <p className="text-sm text-primary">Vercel, Render & GitHub Pages</p>
               </div>
               <Cloud size={28} weight="duotone" className="text-primary ml-auto" />
             </motion.div>
