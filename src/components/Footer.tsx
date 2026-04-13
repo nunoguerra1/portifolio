@@ -1,6 +1,12 @@
 import { motion } from "framer-motion";
 import { LogoMarquee } from "./MarqueeText";
 
+const footerLinks = [
+  { label: "GITHUB", url: "https://github.com/nunoguerra1" },
+  { label: "LINKEDIN", url: "https://www.linkedin.com/in/nunomguerra" },
+  { label: "CÓDIGO FONTE", url: "https://github.com/nunoguerra1/portifolio" },
+];
+
 export const Footer = () => {
   return (
     <footer className="border-t border-border/30 relative overflow-hidden">
@@ -13,7 +19,7 @@ export const Footer = () => {
         >
           <span className="font-extrabold text-primary text-lg">DevPortfolio</span>
           <p className="text-xs text-muted-foreground mt-1">
-            FEITO COM AMOR E CARINHO &copy; 2024
+            FEITO COM AMOR E CARINHO &copy; 2026
           </p>
         </motion.div>
         <motion.div
@@ -23,14 +29,16 @@ export const Footer = () => {
           transition={{ delay: 0.1 }}
           className="flex gap-6"
         >
-          {["GITHUB", "LINKEDIN", "SOURCE CODE"].map((link) => (
+          {footerLinks.map((link) => (
             <motion.a
-              key={link}
-              href="#"
+              key={link.label}
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ y: -2 }}
               className="text-xs font-semibold text-muted-foreground tracking-wider hover:text-foreground transition-colors cursor-pointer"
             >
-              {link}
+              {link.label}
             </motion.a>
           ))}
         </motion.div>

@@ -6,7 +6,7 @@ import projetoAquaAdopt from "@/assets/AquaAdopt.jfif";
 import projetoEmConstrucao from "@/assets/EmConstrucao.png";
 import { FloatingCircle, FloatingDiamond, FloatingCross, FloatingDots, ParallaxBlob } from "./FloatingElements";
 
-const projects: { icon: ElementType; title: string; description: string; tags: string[]; image: string; reverse: boolean }[] = [
+const projects: { icon: ElementType; title: string; description: string; tags: string[]; image: string; reverse: boolean; link: string }[] = [
   {
     icon: MagicWand,
     title: "Aqua-Adopt",
@@ -15,6 +15,7 @@ const projects: { icon: ElementType; title: string; description: string; tags: s
     tags: ["REACT", "NEXT.JS", "PRISMA"],
     image: projetoAquaAdopt,
     reverse: false,
+    link: "https://github.com/nunoguerra1/aqua-adopt",
   },
   {
     icon: UsersThree,
@@ -24,6 +25,7 @@ const projects: { icon: ElementType; title: string; description: string; tags: s
     tags: ["em construção", "em construção", "em construção"],
     image: projetoEmConstrucao,
     reverse: true,
+    link: "/notfound",
   },
 ];
 
@@ -131,13 +133,15 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: n
             ))}
           </div>
           <motion.a
-            href="#"
+            href={project.link}
+            target={project.link.startsWith("http") ? "_blank" : "_self"}
+            rel={project.link.startsWith("http") ? "noopener noreferrer" : undefined}
             whileHover={{ scale: 1.06, x: 4 }}
             whileTap={{ scale: 0.97 }}
             transition={{ type: "spring", stiffness: 400, damping: 17 }}
             className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-full font-semibold shadow-lg shadow-primary/25 cursor-pointer"
           >
-            View Project <ArrowRight size={18} weight="bold" />
+            Ver projeto <ArrowRight size={18} weight="bold" />
           </motion.a>
         </motion.div>
       </motion.div>
