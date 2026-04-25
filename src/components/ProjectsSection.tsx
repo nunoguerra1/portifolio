@@ -3,7 +3,7 @@ import { ArrowRight, MagicWand, UsersThree } from "@phosphor-icons/react";
 import { motion, useScroll, useTransform, useMotionValue, useTransform as useTransformFM } from "framer-motion";
 import { useRef, type ElementType } from "react";
 import projetoAquaAdopt from "@/assets/AquaAdopt.jfif";
-import projetoEmConstrucao from "@/assets/EmConstrucao.png";
+import projetoUtask from "@/assets/uTask.png";
 import { FloatingCircle, FloatingDiamond, FloatingCross, FloatingDots, ParallaxBlob } from "./FloatingElements";
 
 const projects: { icon: ElementType; title: string; description: string; tags: string[]; image: string; reverse: boolean; link: string }[] = [
@@ -19,11 +19,11 @@ const projects: { icon: ElementType; title: string; description: string; tags: s
   },
   {
     icon: UsersThree,
-    title: "Em Construção!",
+    title: "uTask 3.0",
     description:
-      "Segundo projeto em construção! aguarde um pouco :)",
-    tags: ["em construção", "em construção", "em construção"],
-    image: projetoEmConstrucao,
+      "O projeto uTask 3.0 consiste em uma aplicação que simula um quadro Kanban, permitindo ao usuário adicionar tarefas e movimentá-las entre as colunas “A Fazer”, “Em Andamento” e “Concluído”. Além disso, a interface de dashboard exibe uma frase motivacional, e o sistema oferece funcionalidades de cadastro e autenticação de usuários.",
+    tags: ["REACT", "JSON SERVER", "TYPESCRIPT"],
+    image: projetoUtask,
     reverse: true,
     link: "/notfound",
   },
