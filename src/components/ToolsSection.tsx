@@ -14,7 +14,7 @@ const mainTools: { name: string; icon: ElementType; color: string }[] = [
   { name: "DOCKER", icon: CubeTransparent, color: "bg-green-light" },
 ];
 
-const secondaryTools = ["Tailwind CSS", "Node.js", "TypeScript", "Figma", "Git", "Redis"];
+const secondaryTools = ["Tailwind CSS", "Node.js", "TypeScript", "NestJS", "Figma", "Git"];
 
 const categoryIcons: { icon: ElementType; label: string }[] = [
   { icon: BracketsAngle, label: "FRONTEND" },
